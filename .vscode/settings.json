@@ -1,0 +1,8 @@
+{
+    "liveServer.settings.port": 343,
+    "liveServer.settings.useBrowserPreview": true,
+    "liveServer.settings.AdvanceCustomBrowserCmdLine": "",
+    "liveServer.settings.ChromeDebuggingAttachment": false,
+    "liveServer.settings.CustomBrowser": "chrome",
+    "liveServer.settings.host": "localhost"
+}
