@@ -12,11 +12,7 @@ if(!empty($_POST))
     $email = mysqli_real_escape_string($conn, $_POST["email"]);  
     $profile = mysqli_real_escape_string($conn, $_POST["profile"]);  
     $password = mysqli_real_escape_string($conn, $_POST["password"]);
-    echo $name;
-    echo $email;
-    echo $profile;
-    echo $password;
-//     die();
+   
     $sql = "INSERT INTO user(name, email, profile, password) VALUES('$name', '$email', '$profile', '$password')";
     if(mysqli_query($conn, $sql))
     {

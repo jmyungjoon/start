@@ -76,8 +76,9 @@
             <div class="modal-body">
               <form method="post" id="insert_form">
                 <label>Enter Name</label>
-                <input type="text" name="name" id="name" class="form-control" />
+                <input type="text" name="name" id="name" onBlur="checkAvailability()" class="form-control" /><span id="user-availability-status" style="color:red"></span> 
                 <br />
+                <p><img src="LoaderIcon.gif" id="loaderIcon" style="display:none" /></p>
                 <label>Enter Email Address</label>
                 <input type="text" name="email" id="email" class="form-control"/>
                 <br />
@@ -88,7 +89,7 @@
                 <input type="password" name="password" id="password" class="form-control" placeholder="******" />
                 <br />
                 <label>Enter Confirm Password</label>
-                <input type="password" name="password" id="password" class="form-control" placeholder="******"/>
+                <input type="password" name="password" id="password2" class="form-control" placeholder="******"/>
                 <br />
                 <input type="submit" name="insert" id="insert" value="Submit" class="btn btn-success" />
               </form>
@@ -99,8 +100,25 @@
         </div>
     </div>
 </div>
-<script>  
-     $(document).ready(function(){
+<script>
+      function checkAvailability() {
+            $("#loaderIcon").show();
+            $.ajax({
+            url: "check_availability.php",
+            data:'username='+$("#name").val(),
+            type: "POST",
+            success:function(data){
+                setTimeout(function() {$("#user-availability-status").html(data);
+                $("#loaderIcon").hide();}, 1000);
+                // $("#user-availability-status").hide();}, 10000);
+                // $("#user-availability-status").html(data);
+                // $("#loaderIcon").hide();
+            },
+            error:function (){}
+            });
+      }
+
+      $(document).ready(function(){
         $('#insert_form').on("submit", function(event){  
         event.preventDefault();  
         if($('#name').val() == ""){  
@@ -110,8 +128,12 @@
             alert("email is required");  
         }  
         else if($('#profile').val() == ''){  
-            alert("Profile is required");  
-        } else {  
+            alert("Profile is required"); 
+        }
+        else if($('#password').val() != $('#password2').val()){
+            alert("Password are not matched!");
+        }
+        else {  
             confirm("Are you sure?")
             $.ajax({  
                 url:"insert.php",  
