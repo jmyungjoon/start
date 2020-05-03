@@ -11,7 +11,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
     <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <link href="style.css?id=1234" rel="stylesheet">
+    <!-- <link href="style.css?id=1234" rel="stylesheet"> -->
     <!-- <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
     <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
     <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
@@ -30,7 +30,7 @@
         user-select: none;
       }
 
-      @media (min-width: 768px) {
+      @media (min-width: 1024px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
@@ -64,9 +64,10 @@
             </div>
             <div class="text-center">
                     <img src="david.jpg" class="img-fluid wow tada z-depth-1 animated rounded"  data-wow-delay="0.2s" style="visibility: visible; animation-name: tada; animation-iteration-count: 1; animation-delay: 2s; width: 300px;" >
-                    <p class="lead" data-aos="fade-up">Welcome to my developer site! <br> You will meet some interesting works of web application or home pages that I am making as studying projects. <br>Please bear with me. Many parts are still under development.</p>
-                      <a href="http://ittcserver.net/webapplication" class="btn btn-lg btn-primary" data-aos="fade-up" data-aos-delay="1000">Web Application</a>
+                    <!-- <p class="lead" data-aos="fade-up">Welcome to my developer site! <br> You will meet some interesting works of web application or home pages that I am making as studying projects. <br>Please bear with me. Many parts are still under development.</p> -->
             </div>
+            
+            <a href="http://ittcserver.net/webapplication" class="btn btn-md btn-primary" data-aos="fade-up" data-aos-delay="1000" style="margin-top: 15px">Web Application</a>
             <!-- <p class="lead"> -->
                 
             <!-- </p> -->
