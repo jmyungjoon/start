@@ -1,9 +1,9 @@
 {
   "extends": [
-    "stylelint-config-twbs-bootstrap/scss"
+    "stylelint-config-twbs-bootstrap"
   ],
   "rules": {
-    "property-blacklist": [
+    "property-disallowed-list": [
       "border-radius",
       "border-top-left-radius",
       "border-top-right-radius",
@@ -11,6 +11,6 @@
       "border-bottom-left-radius",
       "transition"
     ],
-    "function-blacklist": ["calc"]
+    "function-disallowed-list": ["calc"]
   }
 }
